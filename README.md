@@ -16,6 +16,12 @@ pip install -r requirements.txt
 
 ...before you run the script.
 
+If you are on a Mac, make sure you have "flac" installed through Homebrew:
+
+```
+brew install flac
+```
+
 This script runs in Python 3.
 
 ### Acknowledgements

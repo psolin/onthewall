@@ -4,13 +4,9 @@ import speech_recognition as sr
 
 
 def say_it():
-    
     recognition = True
 
-    while recognition == True:
-
-
-
+    while recognition:
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Waiting for the trigger...")
@@ -31,7 +27,7 @@ def say_it():
                     except sr.RequestError as e:
                         print("Could not request results from Google Speech Recognition service; {0}".format(e))
                         recognition = False
-                    
+
                     command = r.recognize_google(audio)
                     print("Your command is: '%s'" % command)
                 else:
@@ -44,5 +40,6 @@ def say_it():
             except sr.RequestError as e:
                 print("Could not request results from Google Speech Recognition service; {0}".format(e))
                 recognition = False
+
 
 say_it()
